@@ -20,7 +20,7 @@ pipeline {
     post {
         always {
             echo 'Archive stage..'
-            archiveArtifacts: 'dist/trainSchedule.zip'
+            archiveArtifacts artifacts: 'dist/trainSchedule.zip'
         }
     }
 
