@@ -19,7 +19,8 @@ pipeline {
     }
     post {
         always {
-            echo 'Post stage..'
+            echo 'Archive stage..'
+            archiveArtifacts: 'dist/trainSchedule.zip'
         }
     }
 
