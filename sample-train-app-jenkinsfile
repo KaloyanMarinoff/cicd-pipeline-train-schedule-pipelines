@@ -5,8 +5,15 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh './gradlew build --no-daemon'
             }
         }
-
     }
+    post {
+        always {
+            echo 'Post stage..'
+        }
+    }
+
+    
 }
