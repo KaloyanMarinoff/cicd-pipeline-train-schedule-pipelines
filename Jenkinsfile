@@ -9,6 +9,9 @@ pipeline {
                 }
             }
             steps {
+                echo 'Gradlew version..'
+                sh './gradlew --version'
+
                 echo 'Building..'
                 sh './gradlew build --no-daemon'
             }
