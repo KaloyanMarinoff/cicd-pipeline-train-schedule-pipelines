@@ -9,9 +9,6 @@ pipeline {
                 }
             }
             steps {
-                echo 'Gradlew version..'
-                sh './gradlew --version'
-
                 echo 'Building..'
                 sh './gradlew build --no-daemon'
             }
@@ -19,7 +16,7 @@ pipeline {
     }
     post {
         always {
-            echo 'Archive stage..'
+            echo 'Archive..'
             archiveArtifacts artifacts: 'dist/trainSchedule.zip'
         }
     }
