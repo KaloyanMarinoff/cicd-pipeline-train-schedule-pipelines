@@ -10,7 +10,7 @@ pipeline{
   }
   post{
     always{
-      archiveArtifacts dist/trainSchedule.zip
+      archiveArtifacts artifacts: "dist/trainSchedule.zip", fingerprint:true
     }
   }
 }
