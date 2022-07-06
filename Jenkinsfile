@@ -5,8 +5,12 @@ pipeline{
     stage('Build'){
       steps{
         sh './gradlew build --no-daemon'
-        archiveArtifacts: dist/trainSchedule.zip
       }
+    }
+  }
+  post{
+    always{
+      archiveArtifacts dist/trainSchedule.zip
     }
   }
 }
